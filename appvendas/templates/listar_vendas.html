@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+<h1>Listagem de Vendas</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nome do Procedimento</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Forma de Pagamento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for venda in vendas %}
+        <tr>
+            <td>{{ venda.nome_procedimento }}</td>
+            <td>R$ {{ venda.valor }}</td>
+            <td>{{ venda.data }}</td>
+            <td>{{ venda.get_forma_pagamento_display }}</td>
+            <td>
+                <a href="{% url 'editar_venda' venda.pk %}">Editar</a>
+                <a href="{% url 'confirmar_exclusao' venda.pk %}">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% include 'footer.html' %}
