@@ -7,7 +7,7 @@
 
 th, td {
     border: 1px solid #000; /* Define uma borda preta de 1px para todas as células */
-    padding: 1px; /* Adiciona um espaço interno nas células */
+    padding: 3px; /* Adiciona um espaço interno nas células */
 }
 </style>
 <h1>Extrato</h1>
@@ -36,9 +36,9 @@ th, td {
     <tbody>
         {% for venda in vendas %}
         <tr>
-            <td>{{ venda.data|date:"d/m/Y" }}</td>
+            <td>{{ venda.data|date:"d/m" }}</td>
             <td>{{ venda.nome_cliente }}</td>
-            <td>R$ {{ venda.valor }}</td>
+            <td>{{ venda.valor }}</td>
             <td>{{ venda.nome_procedimento }}</td>
             <td>{{ venda.get_forma_pagamento_display }}</td>
             <td>
