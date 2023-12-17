@@ -2,13 +2,13 @@
     <div><br>
         <h1>Inserir Dados</h1>
         <!-- Formulário de inserção de dados -->
-        <form method="post">
-            {% csrf_token %}
             <form method="post">
+                {% csrf_token %}
                 {% for field in form %}
                     {{ field.label_tag }}:<br>
                     {{ field }}<br><br>
                 {% endfor %}
+                
                 <button type="submit">Enviar</button>
             </form>
     </div>   

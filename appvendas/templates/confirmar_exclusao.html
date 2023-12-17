@@ -1,0 +1,12 @@
+{% include 'header.html' %}
+<body>
+    <h1>Confirmar Exclusão</h1>
+    <p>Você está prestes a excluir a venda: {{ venda.nome_procedimento }}. Tem certeza?</p>
+    <form action="{% url 'excluir_venda' venda.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirmar Exclusão">
+    </form>
+    <a href="{% url 'listar_vendas' %}">Cancelar</a>
+</body>
+</html>
+{% include 'footer.html' %}

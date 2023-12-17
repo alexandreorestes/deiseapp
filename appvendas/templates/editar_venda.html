@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+    <div><br>
+        <h1>Editar Venda</h1>
+        <!-- Formulário de inserção de dados -->
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            {{ field.label_tag }}
+            {{ field }}
+            {% endfor %}
+            <button type="submit">Enviar</button>
+        </form>
+    </div>   
+{% include 'footer.html' %}

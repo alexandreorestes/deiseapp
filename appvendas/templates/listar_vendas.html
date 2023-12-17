@@ -1,21 +1,45 @@
 {% include 'header.html' %}
-<h1>Listagem de Vendas</h1>
+<style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000; /* Define uma borda preta de 1px para todas as células */
+    padding: 1px; /* Adiciona um espaço interno nas células */
+}
+</style>
+<h1>Extrato</h1>
+<!-- Formulário para filtrar por datas -->
+<form method="GET">
+    <label for="data_inicial">Data Inicial:</label>
+    <input type="date" id="data_inicial" name="data_inicial">
+
+    <label for="data_final">Data Final:</label>
+    <input type="date" id="data_final" name="data_final">
+
+    <input type="submit" value="Filtrar">
+</form><br>
+<h1>Total: R$ {{ soma_valores|default:"0.00"|floatformat:"2" }}</h1>
 <table>
     <thead>
         <tr>
-            <th>Nome do Procedimento</th>
-            <th>Valor</th>
             <th>Data</th>
-            <th>Forma de Pagamento</th>
-            <th>Ações</th>
+            <th>Cliente</th>
+            <th>Valor</th>
+            <th>Serviço</th>
+            <th>Pago</th>
+            <th>Corrigir</th>
         </tr>
     </thead>
     <tbody>
         {% for venda in vendas %}
         <tr>
-            <td>{{ venda.nome_procedimento }}</td>
+            <td>{{ venda.data|date:"d/m/Y" }}</td>
+            <td>{{ venda.nome_cliente }}</td>
             <td>R$ {{ venda.valor }}</td>
-            <td>{{ venda.data }}</td>
+            <td>{{ venda.nome_procedimento }}</td>
             <td>{{ venda.get_forma_pagamento_display }}</td>
             <td>
                 <a href="{% url 'editar_venda' venda.pk %}">Editar</a>

@@ -6,15 +6,17 @@ body {
     font-family: "Arial", sans-serif; /* Escolha uma fonte apropriada */
     text-align: center; /* Centralizar todo o texto */
     padding: 20px; /* Adicionando um espaçamento ao redor da página */
-    
 }
    
 h1 {
     font-size: 36px; /* Letras grandes para títulos */
     color: #ff006f; /* Cor para boa legibilidade */
 }
-p {
+h3 {
     color: #ff006f; /* Cor para boa legibilidade */
+}
+p {
+    color: #0e0107; /* Cor para boa legibilidade */
 }
 
 /* Adicionando estilos de largura, altura e bordas ao formulário */
@@ -106,3 +108,4 @@ header {
         text-align: center; /* Alinha o texto do menu ao centro */
     }
 }
+
