@@ -18,6 +18,7 @@ class Venda(models.Model):
         ('ozonio', 'Ozônio'),
         ('plastica', 'Plástica'),
         ('coloracao', 'Coloração'),
+         ('outro', 'Outros'),
     ]
 
     valor = models.DecimalField(max_digits=10, decimal_places=2)
