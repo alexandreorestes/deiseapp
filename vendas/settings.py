@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-vww!#!yf)1rbb--9+i%k=v^6*y!gtt-lqm01_lbrp25&c&r(3q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['deiseapp.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'deiseapp.onrender.com']
 
 
 # Application definition
@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = "/var/www/deiseapp.onrender.com/static/"
+STATIC_ROOT = "deiseapp.onrender.com/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
