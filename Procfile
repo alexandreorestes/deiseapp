@@ -1,1 +1,1 @@
-web: gunicorn meuprojeto.wsgi
+web: gunicorn vendas.wsgi
