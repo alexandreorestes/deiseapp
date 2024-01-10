@@ -1,0 +1,115 @@
+/* estilo.css */
+
+/* Estilos personalizados */
+body {
+    background-color: #fd000026; /* Fundo rosa levíssimo */
+    font-family: "Arial", sans-serif; /* Escolha uma fonte apropriada */
+    text-align: center; /* Centralizar todo o texto */
+    padding: 20px; /* Adicionando um espaçamento ao redor da página */
+}
+   
+h1 {
+    font-size: 40px; /* Letras grandes para títulos */
+    color: #ff006f; /* Cor para boa legibilidade */
+}
+h3 {
+    color: #ff006f; /* Cor para boa legibilidade */
+}
+p {
+    color: #0e0107; /* Cor para boa legibilidade */
+}
+
+/* Adicionando estilos de largura, altura e bordas ao formulário */
+form {
+    max-width: 90%; /* Largura máxima do formulário ocupando todo o espaço disponível */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Espaçamento interno para melhor visualização */
+    border-radius: 10px; /* Cantos arredondados do formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff006f; /* Cor de botão rosa */
+    color: #fff; /* Texto branco no botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c20255; /* Cor rosa mais escura ao passar o mouse */
+}
+a{
+    color: #c20255;
+    font-size: x-large
+    text-decoration: none;
+}
+.sucesso {
+    background-color: white; /* Define o fundo como branco */
+    padding: 20px; /* Adiciona um espaçamento interno para melhorar a aparência */
+    margin: 20px;
+}
+header {
+    background-color: #ff006f;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Define a direção dos elementos como coluna */
+    align-items: center; /* Alinha os itens ao centro horizontalmente */
+    text-align: center; /* Alinha o texto do cabeçalho ao centro */
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        font-size: 28px; /* Tamanho do texto do menu para dispositivos móveis */
+    }
+
+    .menu.active ul {
+        display: block;
+    }
+
+    .menu li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: center;
+        font-size: 32px; /* Tamanho do ícone do hamburguer */
+    }
+}
+
