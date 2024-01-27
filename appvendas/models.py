@@ -9,22 +9,12 @@ class Venda(models.Model):
         ('troca', 'Troca'),
         ('fiado', 'Fiado'),
     ]
-    PROCEDIMENTOS = [
-        ('corte', 'Corte'),
-        ('escova', 'Escova'),
-        ('luzes', 'Luzes'),
-        ('mecha', 'Mecha'),
-        ('tratamento', 'Selagem'),
-        ('ozonio', 'Ozônio'),
-        ('plastica', 'Plástica'),
-        ('coloracao', 'Coloração'),
-        ('outro', 'Outros'),
-    ]
+   
 
     valor = models.DecimalField(max_digits=10, decimal_places=2)
     forma_pagamento = models.CharField(max_length=20, choices=FORMAS_DE_PAGAMENTO)
     data = models.DateField(auto_now_add=True)
-    nome_procedimento =  models.CharField(max_length=30, choices=PROCEDIMENTOS)
+    nome_procedimento =  models.CharField(max_length=100, default=' ')
     nome_cliente = models.CharField(max_length=100, default=' ')
 
     def __str__(self):
